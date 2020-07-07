@@ -1,5 +1,6 @@
 # libfxp
 Cross-platform fixed point maths library with a support of macro templates written fully on C.
+
 [Russian/Русский](./README_ru.md)
 
 ## Description
