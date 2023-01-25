@@ -98,5 +98,3 @@ int64_t fxp_sipow(int64_t base, uint8_t exponent)
             return result;
     }
 }
-
-

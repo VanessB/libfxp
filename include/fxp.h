@@ -152,7 +152,7 @@
 #define fxp_add_to(X1,X2) __GENERIC_2_X2_US(fxp_add_to,X1,X2)
 
 #define fxp_sub(X1,X2) __GENERIC_2_X2_US(fxp_sub,X1,X2)
-#define fxp_sub_to(X1,X2) __GENERIC_2_X2_US(fxp_add_to,X1,X2)
+#define fxp_sub_to(X1,X2) __GENERIC_2_X2_US(fxp_sub_to,X1,X2)
 
 #define fxp_mul(X1,X2,X3) __GENERIC_3_X2_US(fxp_mul,X1,X2,X3)
 #define fxp_mul_to(X1,X2,X3) __GENERIC_3_X2_US(fxp_mul_to,X1,X2,X3)

@@ -57,10 +57,10 @@
     inline STRONG_INLINE void TEMPLATE_2(fxp_mul_to,T)(T* left, T right, bitcnt_t bits) \
     {                                                                   \
         /* Произведение знаковых типа T основано на произведении беззнаковых типа UT. */ \
-        UT _0eft  = (UT)(fxp_abs(*left));                               \
+        UT _left  = (UT)(fxp_abs(*left));                               \
         UT _right = (UT)(fxp_abs(right));                               \
                                                                         \
-        TEMPLATE_2(fxp_mul_to,UT)(&_0eft, _right, bits);                \
+        TEMPLATE_2(fxp_mul_to,UT)(&_left, _right, bits);                \
                                                                         \
         /* Если значение UT не помещается в T, конвертация вызывает неопределённое поведение. */ \
         /* Поэтому следует использовать битовую маску. */               \
@@ -68,9 +68,9 @@
                                                                         \
         /* Маска, у которой CHAR_BIT * sizeof(T) - 1 младших бит - единицы. */ \
         static const UT mask = (UT)((1llu << (T_bits - 1)) - 1);        \
-        _0eft &= mask;                                                  \
+        _left &= mask;                                                  \
                                                                         \
-        *left = (*left < 0) != (right < 0) ? -(T)(_0eft) : (T)(_0eft);  \
+        *left = (*left < 0) != (right < 0) ? -(T)(_left) : (T)(_left);  \
     }
 
 
